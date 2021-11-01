@@ -11,15 +11,16 @@ packs = function() c("OSCA", "OSCA.basic", "OSCA.workflows",
 #' @param x basename of package
 #' @return character(1) URL
 #' @export
-make_url = function(x) paste("https://github.com/OSCA-source/", x, ".git", sep="")
+make_url = function(x) paste("https://git.bioconductor.org/packages/", x, ".git", sep="")
 
 #' use gert to clone all packages
 #' @importFrom gert git_clone
+#' @param branch character(1) defaults to RELEASE_3_13
 #' @note runs `gert::git_clone` with path set to value of `getwd()`
 #' @return invisibly the result of `git_clones` in a list
 #' @export
-clone_osca = function() {
-  jnk = lapply(packs(), function(x) gert::git_clone( make_url(x), path=x ) )
+clone_osca = function(branch="RELEASE_3_13") {
+  jnk = lapply(packs(), function(x) gert::git_clone( make_url(x), path=x, branch=branch ) )
   invisible(unlist(jnk))
 }
 
