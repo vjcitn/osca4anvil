@@ -1,5 +1,5 @@
 # osca4anvil
-simple support for OSCA in AnVIL for Bioc 3.14
+simple support for OSCA in AnVIL for Bioc 3.13/3.14
 
 basic ideas - note caveats at end
 
