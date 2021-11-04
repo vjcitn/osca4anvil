@@ -4,12 +4,14 @@
 \alias{run_vignettes_code}
 \title{run all code in book vignettes in an OSCA.* component}
 \usage{
-run_vignettes_code(x, exclude = "index.Rmd")
+run_vignettes_code(x, exclude = "index.Rmd", purge = TRUE)
 }
 \arguments{
 \item{x}{path to OSCA.* component base folder}
 
 \item{exclude}{character() defaults to `index.Rmd` which would not be compiled in standard usage}
+
+\item{purge}{logical(1) if TRUE, will clean objects produced from global environment and run gc()}
 }
 \description{
 run all code in book vignettes in an OSCA.* component
