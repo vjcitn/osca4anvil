@@ -152,7 +152,9 @@ execution of the script given above on an 8 core, 30GB Terra instance.
 
 ![exec profile](https://storage.googleapis.com/bioc-anvil-images/prof1.png)
 
-Of note is the total memory consumption (subtract the maximum from minimum
-displayed, suggesting that RAM usage never exceeded 1GB), and the occurrence of
-short events in which the baseline CPU consumption rose from around 1/8 to around 1.
+Of note is the total memory consumption of around 4GB (units are kilobytes), and the occurrence of
+short events in which the baseline CPU consumption rose from around 1/8 (one of 8 cores) to around 1 (all 8 cores mobilized).
+The analysis of RAM usage by the specific tasks undertaken involves subtracting the maximum from minimum
+displayed.   This indicates that RAM usage over the baseline required by Rstudio and
+basic package loading never exceeded 1.5.GB.
 
