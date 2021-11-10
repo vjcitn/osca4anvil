@@ -1,3 +1,4 @@
+
 We provide resources to compute with the [Orchestrating Single Cell Analysis book](http://bioconductor.org/books/3.13/OSCA/).  Use at least an 8 core machine to
 acquire packages and run workflows described in this workspace.  More information on execution profiles (how much time and memory  book-based jobs consume) is
 forthcoming.
@@ -18,6 +19,14 @@ package environment is properly set up.  See `Acquire all packages...` below to 
 Many code chunks require certain antecedent computations to be completed before they will run.
 You may have to hunt back through preceding chunks to find the antecedents.  If this proves
 impossible, please file a [detailed bug report](https://github.com/vjcitn/osca4anvil/issues/new).
+
+## Taster
+
+After following the setup instructions below, you can run the code snippet given towards the end of this
+description in Rstudio.  In about 3 minutes, you will have acquired data on 4000 PBMCs published by TENxGenomics,
+performed basic QC and filtering, and computed projections and cluster assignments to yield
+
+![4000 cells](https://storage.googleapis.com/bioc-anvil-images/demoTSNE.png)
 
 ## Starting out (Nov 7, 2021), using a Bioconductor 3.13 cloud environment: 
 
@@ -135,4 +144,15 @@ colLabels(sce.pbmc) <- factor(clust)
 plotTSNE(sce.pbmc, colour_by="label")
 
 ```
+
+## Execution profile
+
+The following graphic illustrates the use of CPU, memory, disk, and network in the
+execution of the script given above on an 8 core, 30GB Terra instance.
+
+![exec profile](https://storage.googleapis.com/bioc-anvil-images/prof1.png)
+
+Of note is the total memory consumption (subtract the maximum from minimum
+displayed, suggesting that RAM usage never exceeded 1GB), and the occurrence of
+short events in which the baseline CPU consumption rose from around 1/8 to around 1.
 
