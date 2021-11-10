@@ -1,6 +1,6 @@
 Package: osca4anvil
 Title: Simplify production of computable OSCA texts and artifacts for AnVIL
-Version: 0.0.7
+Version: 0.0.8
 Authors@R:
     person(given = "Vince",
            family = "Carey",
