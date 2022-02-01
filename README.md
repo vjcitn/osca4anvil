@@ -1,5 +1,17 @@
 # osca4anvil
+
+## Simple approach
+
+This Dockerfile is used to produce dockerhub: vjcitn/osca4anvil:3.14.0
+```
+FROM us.gcr.io/anvil-gcr-public/anvil-rstudio-bioconductor:3.14.0
+RUN Rscript -e 'BiocManager::install("Bioconductor/AnVIL")'
+RUN Rscript -e 'AnVIL::install(c("gert", "remotes", "DropletUtils", "BiocFileCache", "knitr", "DT"))'
+RUN Rscript -e 'BiocManager::install(c("vjcitn/osca4anvil"), ask=FALSE, update=FALSE); osca4anvil::clone_osca(); lapply(osca4anvil::packs(), osca4anvil::get_deps, installer=AnVIL::install)'
 simple support for OSCA in AnVIL for Bioc 3.13/3.14
+```
+
+## Approach using a default cloud environment in AnVIL
 
 basic ideas - note caveats at end
 
