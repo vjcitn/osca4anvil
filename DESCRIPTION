@@ -1,6 +1,6 @@
 Package: osca4anvil
 Title: Simplify production of computable OSCA texts and artifacts for AnVIL
-Version: 0.0.11
+Version: 0.0.12
 Authors@R:
     person(given = "Vince",
            family = "Carey",
@@ -10,10 +10,10 @@ Authors@R:
 Description: Simplify production of computable OSCA texts and artifacts for AnVIL.
 Depends: R (>= 4.3.0), tools, utils
 Suggests: BiocStyle, testthat, rmarkdown
-Imports: gert, remotes, DropletUtils, BiocFileCache, knitr, DT
+Imports: gert, remotes, DropletUtils, BiocFileCache, knitr, DT, BiocManager
 License: Artistic-2.0
 VignetteBuilder: knitr
 biocViews: SingleCell
-RoxygenNote: 7.1.2
+RoxygenNote: 7.3.1
 LazyData: true
 Encoding: UTF-8

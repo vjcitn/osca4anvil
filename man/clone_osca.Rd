@@ -4,10 +4,10 @@
 \alias{clone_osca}
 \title{use gert to clone all packages}
 \usage{
-clone_osca(branch = "RELEASE_3_13")
+clone_osca(branch = "RELEASE_3_19")
 }
 \arguments{
-\item{branch}{character(1) defaults to RELEASE_3_13}
+\item{branch}{character(1) defaults to RELEASE_3_19}
 }
 \value{
 invisibly the result of `git_clones` in a list
