@@ -7,7 +7,7 @@ basic ideas - note caveats at end
 1) `osca4anvil::clone_osca()` will clone OSCA, OSCA.intro, OSCA.advanced, OSCA.basic, OSCA.workflows, OSCA.multisample into
 current folder, with a specified branch
 
-2) `lapply(osca4anvil::packs(), osca4anvil::get_deps, installer=BiocManager::install)` will install all dependencies of all these cloned packages
+2) `lapply(osca4anvil::packs(), osca4anvil::get_deps, installer=function(x) BiocManager::install(x, ask=FALSE))` will install all dependencies of all these cloned packages
 
 3) `lapply(osca4anvil::packs(), run_vignettes_code)` will `purl` each vignette (except for index.Rmd) and run all the code.
 
