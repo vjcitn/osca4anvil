@@ -15,11 +15,11 @@ make_url = function(x) paste("https://git.bioconductor.org/packages/", x, ".git"
 
 #' use gert to clone all packages
 #' @importFrom gert git_clone
-#' @param branch character(1) defaults to RELEASE_3_13
+#' @param branch character(1) defaults to RELEASE_3_19
 #' @note runs `gert::git_clone` with path set to value of `getwd()`
 #' @return invisibly the result of `git_clones` in a list
 #' @export
-clone_osca = function(branch="RELEASE_3_13") {
+clone_osca = function(branch="RELEASE_3_19") {
   jnk = lapply(packs(), function(x) gert::git_clone( make_url(x), path=x, branch=branch ) )
   invisible(unlist(jnk))
 }
