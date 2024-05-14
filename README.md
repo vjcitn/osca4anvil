@@ -22,7 +22,7 @@ It may be possible to help the user with a shiny app.
 
 The following steps work with sources from Bioconductor 3.19.
 ```
-BiocManager::install("vjcitn/osca4anvil", ref="bioc319")
+BiocManager::install("vjcitn/osca4anvil", ref="bioc319", ask=FALSE)
 library(osca4anvil)
 clone_osca(branch="RELEASE_3_19")
 lapply(osca4anvil::packs(), osca4anvil::get_deps, installer=function(x) BiocManager::install(x, ask=FALSE))
