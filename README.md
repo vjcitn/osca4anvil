@@ -27,6 +27,8 @@ library(osca4anvil)
 clone_osca(branch="RELEASE_3_19")
 lapply(osca4anvil::packs(), osca4anvil::get_deps, installer=function(x) BiocManager::install(x, ask=FALSE))
 ```
+On a GCP instance with 8 cores, 30GB RAM, no parallelization and possible redundancy in installation,
+this process took 14 minutes to install 1.5GB of packages.
 
 Limited confirmation:
 ```
