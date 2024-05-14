@@ -13,7 +13,7 @@ Suggests: BiocStyle, testthat, rmarkdown
 Imports: gert, remotes, DropletUtils, BiocFileCache, knitr, DT
 License: Artistic-2.0
 VignetteBuilder: knitr
-biocViews: DNAMethylation
+biocViews: SingleCell
 RoxygenNote: 7.1.2
 LazyData: true
 Encoding: UTF-8
