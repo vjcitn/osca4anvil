@@ -9,7 +9,7 @@ current folder, with a specified branch
 
 2) `lapply(osca4anvil::packs(), osca4anvil::get_deps, installer=function(x) BiocManager::install(x, ask=FALSE))` will install all dependencies of all these cloned packages
 
-3) `lapply(osca4anvil::packs(), run_vignettes_code)` will `purl` each vignette (except for index.Rmd) and run all the code.
+3) `lapply(osca4anvil::packs(), osca4anvil::run_vignettes_code)` will `purl` each vignette (except for index.Rmd) and run all the code.
 
 After this process, it should be possible to select a book chapter and knit or purl to get the intermediate objects, without
 any installations.
